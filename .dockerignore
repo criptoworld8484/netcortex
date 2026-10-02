@@ -1,0 +1,14 @@
+node_modules
+.next
+data
+.git
+.env
+*.db
+*.db-wal
+*.db-shm
+*.log
+Dockerfile
+docker-compose.yml
+Caddyfile.example
+README.md
+docs

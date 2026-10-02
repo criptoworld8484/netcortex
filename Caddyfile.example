@@ -1,0 +1,15 @@
+# Example Caddy reverse proxy for NetCortex.
+#
+# Recommended access: keep this service LAN/Tailscale-only.
+# On a Tailnet, Caddy can serve internal TLS automatically:
+#   - host the app on your machine's Tailscale name (MagicDNS + HTTPS enabled)
+#   - or use `tls internal` for a plain LAN hostname.
+#
+#   netcortex.tail1234.ts.net {
+#       reverse_proxy 127.0.0.1:3000
+#   }
+
+netcortex.lan {
+	tls internal
+	reverse_proxy 127.0.0.1:3000
+}

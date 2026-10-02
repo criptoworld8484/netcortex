@@ -1,0 +1,11 @@
+services:
+  netcortex:
+    build: .
+    container_name: netcortex
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - DB_PATH=/app/data/netcortex.db
